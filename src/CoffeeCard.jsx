@@ -11,11 +11,12 @@ import ShareIcon from "@material-ui/icons/Share";
 import {CardMedia} from "@material-ui/core";
 
 const CoffeeCard = (props) => {
-  const {avatarUrl, title, subTitle, description, imageUrl} = props;
+  const {avatarUrl, title, price, description, imageUrl} = props;
 
   return (
-    <Card>
+    <Card style={{marginTop: "25px", height: "400px", overflow: "auto"}}>
       <CardHeader
+        style={{color: "blue", textTransform: "uppercase"}}
         avatar={<Avatar src={avatarUrl} />}
         action={
           <IconButton aria-label="settings">
@@ -23,17 +24,25 @@ const CoffeeCard = (props) => {
           </IconButton>
         }
         title={title}
-        subheader={subTitle}
+        subheader={price}
       />
-      <CardMedia style={{height: "150px"}} image={imageUrl} />
+      <CardMedia
+        component="img"
+        style={{height: "200px", width: "100%", objectFit: "contain"}}
+        image={imageUrl}
+      />
       <CardContent>
         <Typography variant="body2" component="p">
           {description}
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">BUY NOW</Button>
-        <Button size="small">OFFER</Button>
+        <Button style={{color: "purple"}} size="small">
+          BUY NOW
+        </Button>
+        <Button style={{color: "purple"}} size="small">
+          OFFER
+        </Button>
       </CardActions>
     </Card>
   );

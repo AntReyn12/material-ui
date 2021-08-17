@@ -6,7 +6,7 @@ import coffeeMakerList from "./constants";
 const Content = () => {
   const getCoffeeMakerCard = (coffeeMakerObj) => {
     return (
-      <Grid item sx={12} sm={4}>
+      <Grid item sx={12} sm={4} alignItems="center" justifyContent="center">
         <CoffeeCard {...coffeeMakerObj} />
       </Grid>
     );
