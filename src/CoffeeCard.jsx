@@ -14,7 +14,14 @@ const CoffeeCard = (props) => {
   const {avatarUrl, title, price, description, imageUrl} = props;
 
   return (
-    <Card style={{marginTop: "25px", height: "400px", overflow: "auto"}}>
+    <Card
+      style={{
+        marginTop: "25px",
+        height: "400px",
+        overflow: "auto",
+        backgroundColor: "GhostWhite",
+      }}
+    >
       <CardHeader
         style={{color: "blue", textTransform: "uppercase"}}
         avatar={<Avatar src={avatarUrl} />}
